@@ -18,7 +18,7 @@
 
         <div class="img_Bio">
           <a target="_blank" href="https://www.linkedin.com/in/andres-ramirez-4a677023b/">
-            <img src="../../assets/images/bio/LinKedin.webp" title="Linkedin" class="img_Bio">
+            <img src="../../assets/images/bio/linKedin.webp" title="Linkedin" class="img_Bio">
           </a>
           <a target="_blank" href="https://github.com/Kirbysnake1">
             <img src="../../assets/images/bio/gitHub.webp" title="gitHub" class="img_Bio" />

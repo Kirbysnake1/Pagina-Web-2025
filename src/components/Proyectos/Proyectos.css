@@ -1,65 +1,124 @@
+/* ==========================================================================
+   Proyecto: Carrusel GitHub
+   Archivo: styles.css
+   Descripción: Estilos visuales para el carrusel de proyectos
+   Autor: Andrés F. Ramírez Espinal
+   Fecha: 12/10/2025
+   Estilo de documentación: Bloques + LineInLine
+   ========================================================================== */
+
+/* Importa la fuente principal Baloo 2 desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
 
+/*------------------------------------*\
+    #CONTENEDOR PRINCIPAL
+\*------------------------------------*/
 
+/**
+ * .github-carousel
+ * Contenedor general del carrusel
+ * Define tipografía, colores base y estilo del bloque
+ */
 .github-carousel {
-    font-family: "Baloo 2", sans-serif;
-
-    color: #000000;
-    padding: 2rem;
-    text-align: center;
-    border-radius: 20px;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+    font-family: "Baloo 2", sans-serif; /* Fuente moderna y redondeada */
+    color: #000000; /* Texto negro para buen contraste */
+    padding: 2rem; /* Espaciado interno cómodo */
+    text-align: center; /* Centra el contenido */
+    border-radius: 20px; /* Bordes redondeados suaves */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05); /* Sombra ligera */
 }
 
+/*------------------------------------*\
+    #TÍTULO
+\*------------------------------------*/
+
+/**
+ * .title
+ * Encabezado principal del carrusel
+ */
 .title {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-    color: #000000;
+    font-size: 1.8rem; /* Tamaño grande del título */
+    margin-bottom: 1.5rem; /* Separación inferior */
+    color: #000000; /* Color de texto */
 }
 
+/*------------------------------------*\
+    #CARRUSEL
+\*------------------------------------*/
+
+/**
+ * .carousel
+ * Contenedor del conjunto de tarjetas
+ * Controla el ancho máximo y centrado
+ */
 .carousel {
-    width: 90%;
-    max-width: 800px;
-    margin: auto;
+    width: 90%; /* Ocupa el 90% del ancho del contenedor padre */
+    max-width: 800px; /* No supera los 800px */
+    margin: auto; /* Centrado horizontal */
 }
 
+/*------------------------------------*\
+    #CARD
+\*------------------------------------*/
+
+/**
+ * .card
+ * Cada tarjeta dentro del carrusel
+ * Fondo con desenfoque, bordes suaves y disposición flexible
+ */
 .card {
-    background: #eca06c;
-    /* Color semitransparente */
-    backdrop-filter: blur(9px);
-    border-radius: 15px;
-    padding: 20px;
-    min-height: 260px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    background: #eca06c; /* Color base (naranja suave) */
+    backdrop-filter: blur(9px); /* Efecto de desenfoque del fondo */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    min-height: 260px; /* Altura mínima de la tarjeta */
+    display: flex; /* Flexbox para acomodar el contenido */
+    flex-direction: column; /* Elementos apilados verticalmente */
+    justify-content: space-between; /* Distribuye el espacio interno */
 }
 
+/* Título dentro de la tarjeta */
 .card h3 {
-    color: #000000;
-    margin-bottom: 10px;
+    color: #000000; /* Texto negro */
+    margin-bottom: 10px; /* Espaciado inferior */
 }
 
+/* Texto descriptivo dentro de la tarjeta */
 .card p {
-
-    font-size: 0.95rem;
-    opacity: 0.8;
+    font-size: 0.95rem; /* Tamaño de texto legible */
+    opacity: 0.8; /* Ligera transparencia */
 }
 
+/*------------------------------------*\
+    #META DATA
+\*------------------------------------*/
+
+/**
+ * .meta
+ * Sección secundaria (fecha, autor, etc.)
+ */
 .meta {
-    margin: 10px 0;
-    opacity: 0.7;
+    margin: 10px 0; /* Separación vertical */
+    opacity: 0.7; /* Discreto */
 }
 
+/*------------------------------------*\
+    #ENLACES
+\*------------------------------------*/
+
+/**
+ * .link
+ * Enlaces dentro del carrusel (GitHub o demo)
+ */
 .link {
-    font-size: 16px;
-
-    color: #1f344d;
-    text-decoration: none;
-    font-weight: 500;
-    transition: 0.2s;
+    font-size: 16px; /* Tamaño medio del texto */
+    color: #1f344d; /* Azul oscuro sobrio */
+    text-decoration: none; /* Sin subrayado inicial */
+    font-weight: 500; /* Seminegrita */
+    transition: 0.2s; /* Transición suave para hover */
 }
 
+/* Estado hover del enlace */
 .link:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Subraya al pasar el mouse */
 }

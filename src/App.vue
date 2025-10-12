@@ -8,21 +8,16 @@ import Footer from './components/Footer/Footer.vue'
 
 <template>
   <div class="app-container">
-    <Header /> 
+    <Header/> 
     <main class="content">
-      <Bio />
-      <Experiencia />
-      <Proyectos />
+      <Bio/>
+      <Experiencia/>
+      <Proyectos/>
     </main>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <Footer />
+
+    <br><br><br><br><br><br><br><br>
+
+    <Footer/>
   </div>
 </template>
 

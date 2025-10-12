@@ -1,63 +1,111 @@
-/* Importar la fuente solo una vez */
+/* ==========================================================================
+   Proyecto: Navbar Sticky - Proevolution UI
+   Archivo: header.css
+   Descripción: Estilos del encabezado fijo superior y sus enlaces
+   Autor: Andrés F. Ramírez Espinal
+   Fecha: 12/10/2025
+   Estilo de documentación: Bloques + LineInLine
+   ========================================================================== */
+
+/*------------------------------------*\
+    #FUENTE GLOBAL
+\*------------------------------------*/
+
+/* Importar la fuente solo una vez (fuente principal Baloo 2) */
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
 
+/*------------------------------------*\
+    #CONFIGURACIÓN GLOBAL
+\*------------------------------------*/
+
+/**
+ * Suaviza el desplazamiento al hacer clic en anclas o links internos
+ */
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* Desplazamiento fluido */
 }
 
-/* Header */
+/*------------------------------------*\
+    #HEADER STICKY
+\*------------------------------------*/
+
+/**
+ * .header
+ * Barra superior fija (sticky) con desenfoque y sombra
+ * Mantiene los links centrados horizontalmente
+ */
 .header {
-  width: 100%;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  width: 100%; /* Ocupa todo el ancho del viewport */
+  position: sticky; /* Fija la posición al hacer scroll */
+  top: 0; /* Se adhiere al borde superior */
+  z-index: 1000; /* Prioridad alta para estar por encima del contenido */
 
-  display: flex;
-  justify-content: center; /* mantiene centrados los links */
-  gap: 20px;
-  padding: 12px 20px;
-  font-family: "Baloo 2", sans-serif;
-  font-size: 18px;
-  line-height: 25px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.2); /* Fondo semitransparente */
+  backdrop-filter: blur(10px); /* Efecto vidrio borroso */
+  -webkit-backdrop-filter: blur(10px); /* Compatibilidad con Safari */
+
+  display: flex; /* Flexbox para alinear los enlaces */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  gap: 20px; /* Espacio entre los enlaces */
+  padding: 12px 20px; /* Espaciado interno */
+  font-family: "Baloo 2", sans-serif; /* Fuente principal */
+  font-size: 18px; /* Tamaño de texto */
+  line-height: 25px; /* Altura de línea */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Sombra ligera inferior */
 }
 
-/* Links */
+/*------------------------------------*\
+    #LINKS DEL HEADER
+\*------------------------------------*/
+
+/**
+ * .header a
+ * Estilos base de los enlaces del encabezado
+ */
 .header a {
-  color: #222;
-  text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 6px;
-  transition: background 0.1s, color 0.2s;
+  color: #222; /* Color de texto neutro */
+  text-decoration: none; /* Sin subrayado */
+  padding: 8px 12px; /* Espaciado interno */
+  border-radius: 6px; /* Bordes redondeados */
+  transition: background 0.1s, color 0.2s; /* Transiciones suaves */
 }
 
-/* Hover */
+/**
+ * .header a:hover
+ * Estado hover para retroalimentación visual
+ */
 .header a:hover {
-  background: #ddd;
-  color: black;
+  background: #ddd; /* Fondo gris claro */
+  color: black; /* Texto oscuro */
 }
 
-/* Activo */
+/**
+ * .header a.active
+ * Estado activo (sección actual)
+ */
 .header a.active {
-  background: dodgerblue;
-  color: white;
-  font-weight: 600;
+  background: dodgerblue; /* Azul brillante */
+  color: white; /* Texto blanco */
+  font-weight: 600; /* Resalta el enlace activo */
 }
 
-/* Responsivo */
+/*------------------------------------*\
+    #RESPONSIVE DESIGN
+\*------------------------------------*/
+
+/**
+ * Ajustes para pantallas pequeñas (menores a 500px)
+ * Los enlaces se apilan verticalmente y ocupan todo el ancho
+ */
 @media screen and (max-width: 500px) {
   .header {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Coloca los elementos uno debajo del otro */
+    align-items: center; /* Centra los enlaces */
   }
 
   .header a {
-    margin: 6px 0;
-    width: 100%;                 /* opcional: que ocupen todo el ancho */
-    text-align: center;
+    margin: 6px 0; /* Separación vertical entre links */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    text-align: center; /* Centra el texto */
   }
 }
-

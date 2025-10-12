@@ -1,108 +1,189 @@
+/* ==========================================================================
+   Proyecto: Footer Animado con Burbujas
+   Archivo: Footer.css
+   Descripción: Contiene estilos para el pie de página animado y sus burbujas
+   Autor: Andrés F. Ramírez Espinal
+   Fecha: 12/10/2025
+   Estilo de documentación: Bloques + LineInLine
+   ========================================================================== */
+
+/*------------------------------------*\
+    #FUENTES
+\*------------------------------------*/
+
+/**
+ * Importa la fuente principal Baloo 2 desde Google Fonts
+ * (Asegúrate de importarla solo una vez en el proyecto)
+ */
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
 
+/*------------------------------------*\
+    #BODY GENERAL
+\*------------------------------------*/
 
-
+/**
+ * Configuración general del cuerpo de la página
+ * Incluye fondo, fuente y comportamiento del scroll
+ */
 body {
     /*
-    display:grid;
+    display: grid;
     grid-template-rows: 1fr 10rem auto;
-    grid-template-areas:"main" "." "footer";
-
+    grid-template-areas: "main" "." "footer";
     */
-    font-family: 'Baloo 2';
-    overflow-x:hidden;
-    background:#F5F7FA;
-    min-height:100vh;
-    font-family: 'Open Sans', sans-serif;
-    .footer {
-        font-family: 'Baloo 2';
-        z-index: 1;
-         /* Fondo blanco semitransparente */
-    
-        --footer-background:#f59e64;
-       
-        display:grid;
-        position: relative;
-        grid-area: footer;
-        min-height:12rem;
-        .bubbles {
-            position: absolute;
-            top:0;
-            left:0;
-            right:0;
-            height:1rem;
-            background:var(--footer-background);
-            filter:url("#blob");
-            .bubble {
-                position: absolute;
-                left:var(--position, 50%);
-                background:var(--footer-background);
-                border-radius:100%;
-                animation:bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s),
-                    bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s);
-                transform:translate(-50%, 100%);
-            }
-        }
-        .content {
-            z-index: 2;
-            display:grid;
-            grid-template-columns: 1fr auto;
-            grid-gap: 4rem;
-            padding:2rem;
-            background:var(--footer-background);
-            a, p {
-                color:#000000;
-                text-decoration:none;
-            }
-            b {
-                color:rgb(0, 0, 0);
-            }
-            p {
-                margin:0;
-                font-size:.75rem;
-            }
-            >div {
-                display:flex;
-                flex-direction:column;
-                justify-content: center;
-                >div {
-                    margin:0.25rem 0;
-                    >* {
-                        margin-right:.5rem;
-                    }
-                }
-                .image {
-                    align-self: center;
-                    width:4rem;
-                    height:4rem;
-                    margin:0.25rem 0;
-                    background-size: cover;
-                    background-position: center;
-                }
-            }
-        }
-    }
+
+    font-family: 'Baloo 2'; /* Fuente decorativa principal */
+    overflow-x: hidden; /* Evita el scroll horizontal */
+    background: #F5F7FA; /* Fondo gris muy claro */
+    min-height: 100vh; /* Altura mínima para ocupar toda la pantalla */
+    font-family: 'Open Sans', sans-serif; /* Fuente secundaria para texto */
 }
 
+/*------------------------------------*\
+    #FOOTER ANIMADO
+\*------------------------------------*/
+
+/**
+ * .footer
+ * Pie de página con burbujas flotantes animadas
+ * Usa variables CSS para definir el color base
+ */
 .footer {
-  width: 100%;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    font-family: 'Baloo 2'; /* Fuente principal */
+    z-index: 1; /* Capa superior para evitar solapamiento */
+    --footer-background: #f59e64; /* Naranja suave del fondo */
+    display: grid; /* Usa grid para estructurar contenido */
+    position: relative; /* Necesario para posicionar burbujas */
+    grid-area: footer; /* Ubicación del footer en el layout */
+    min-height: 12rem; /* Altura mínima del pie */
 }
 
+/*------------------------------------*\
+    #BURBUJAS
+\*------------------------------------*/
+
+/**
+ * .bubbles
+ * Contenedor superior de las burbujas animadas
+ */
+.footer .bubbles {
+    position: absolute; /* Posición absoluta dentro del footer */
+    top: 0; left: 0; right: 0; /* Ocupa todo el ancho superior */
+    height: 1rem; /* Altura inicial mínima */
+    background: var(--footer-background); /* Fondo igual al footer */
+    filter: url("#blob"); /* Filtro SVG para efecto orgánico */
+}
+
+/**
+ * .bubble
+ * Cada burbuja individual con animación
+ */
+.footer .bubbles .bubble {
+    position: absolute;
+    left: var(--position, 50%); /* Posición horizontal aleatoria */
+    background: var(--footer-background);
+    border-radius: 100%; /* Forma circular */
+    transform: translate(-50%, 100%); /* Centra y parte desde abajo */
+    animation:
+        bubble-size var(--time, 4s) ease-in infinite var(--delay, 0s),
+        bubble-move var(--time, 4s) ease-in infinite var(--delay, 0s); /* Animaciones compuestas */
+}
+
+/*------------------------------------*\
+    #CONTENIDO DEL FOOTER
+\*------------------------------------*/
+
+/**
+ * .content
+ * Contenedor principal del contenido dentro del footer
+ * Incluye enlaces, textos e imágenes
+ */
+.footer .content {
+    z-index: 2; /* Por encima de las burbujas */
+    display: grid;
+    grid-template-columns: 1fr auto; /* Texto a la izquierda, info a la derecha */
+    grid-gap: 4rem; /* Espacio entre columnas */
+    padding: 2rem; /* Espaciado interno */
+    background: var(--footer-background); /* Fondo igual al footer */
+}
+
+/* Estilos globales para enlaces y párrafos */
+.footer .content a,
+.footer .content p {
+    color: #000000; /* Texto negro */
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* Texto destacado */
+.footer .content b {
+    color: rgb(0, 0, 0);
+}
+
+/* Párrafos pequeños */
+.footer .content p {
+    margin: 0;
+    font-size: .75rem; /* Tamaño reducido */
+}
+
+/* Estructura interna en columnas */
+.footer .content > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+}
+
+/* Subdivisiones internas */
+.footer .content > div > div {
+    margin: 0.25rem 0;
+}
+
+/* Margen entre elementos hijos */
+.footer .content > div > div > * {
+    margin-right: .5rem;
+}
+
+/**
+ * .image
+ * Imágenes circulares o logotipos dentro del footer
+ */
+.footer .content .image {
+    align-self: center;
+    width: 4rem; /* Tamaño cuadrado */
+    height: 4rem;
+    margin: 0.25rem 0;
+    background-size: cover; /* Imagen cubre el contenedor */
+    background-position: center; /* Centra la imagen */
+}
+
+/*------------------------------------*\
+    #ANIMACIONES
+\*------------------------------------*/
+
+/**
+ * bubble-size
+ * Controla el tamaño de expansión y contracción de las burbujas
+ */
 @keyframes bubble-size {
     0%, 75% {
-        width:var(--size, 4rem);
-        height:var(--size, 4rem);
+        width: var(--size, 4rem);
+        height: var(--size, 4rem);
     }
     100% {
-        width:0rem;
-        height:0rem;
+        width: 0rem;
+        height: 0rem;
     }
 }
+
+/**
+ * bubble-move
+ * Controla el desplazamiento vertical de las burbujas (ascenso)
+ */
 @keyframes bubble-move {
     0% {
-        bottom:-4rem;
+        bottom: -4rem; /* Inicia fuera del footer */
     }
     100% {
-        bottom:var(--distance, 10rem);
+        bottom: var(--distance, 10rem); /* Sube hasta la distancia definida */
     }
 }

@@ -3,7 +3,7 @@
     <a href="#" @click.prevent="scrollToSection('Bio')">Bio 💻</a>
     <a href="#" @click.prevent="scrollToSection('Experiencia')">Experiencia 🌐</a>
     <a href="#" @click.prevent="scrollToSection('Proyectos')">Proyectos 📖</a>
-    <a href="#" @click.prevent="scrollToSection('Contacto')">Contacto 🤳</a>
+    <a href="#" @click.prevent="scrollToSection('Footer')">Contacto 🤳</a>
   </div>
 </template>
 

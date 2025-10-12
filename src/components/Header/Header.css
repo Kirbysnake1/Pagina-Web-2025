@@ -7,23 +7,22 @@ html {
 
 /* Header */
 .header {
-  position: sticky;       /* se queda arriba cuando llegas a él */
-  top: 0;                 /* pegado al borde superior */
-  z-index: 1000;          /* siempre encima del contenido */
-  background: rgba(255, 255, 255, 0.2); /* Color semitransparente */
-  backdrop-filter: blur(10px);          /* Efecto blur */
-  -webkit-backdrop-filter: blur(10px);  /* Compatibilidad Safari */
-  z-index: 999;  /* fondo blanco para que no se mezcle al hacer scroll */
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 
   display: flex;
-  justify-content: center;
+  justify-content: center; /* mantiene centrados los links */
   gap: 20px;
   padding: 12px 20px;
   font-family: "Baloo 2", sans-serif;
   font-size: 18px;
   line-height: 25px;
-  border-radius: 4px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* opcional: sombrita ligera */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 /* Links */

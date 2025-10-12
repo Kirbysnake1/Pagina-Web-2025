@@ -68,15 +68,15 @@ body {
 
 .item {
     position: absolute;              /* Posicionamiento libre dentro del slider */
-    width: 270px;                    /* Ancho de cada tarjeta */
+    width: 280px;                    /* Ancho de cada tarjeta */
     height: 460px;                   /* Alto de cada tarjeta */
     text-align: justify;             /* Justifica el texto dentro del item */
     background: rgba(255, 255, 255, 0.2); /* Fondo blanco semitransparente */
     backdrop-filter: blur(10px);     /* Aplica un efecto de desenfoque al fondo */
     border-radius: 10px;             /* Bordes redondeados suaves */
     padding: 20px;                   /* Espacio interno alrededor del contenido */
-    transition: 0.5s;                /* Transición suave para animaciones */
-    left: calc(45% - 110px);         /* Centra el item horizontalmente con ajuste */
+    transition: 0.6s;                /* Transición suave para animaciones */
+    left: calc(46% - 110px);         /* Centra el item horizontalmente con ajuste */
     top: 0;                          /* Posición superior inicial */
     font-family: 'Baloo 2';          /* Fuente coherente */
 }
@@ -90,7 +90,7 @@ body {
 #prev {
     position: absolute;          /* Permite posicionarlos dentro del slider */
     top: 40%;                    /* Los coloca aproximadamente en el centro vertical */
-    color: rgb(255, 255, 255);   /* Color del ícono (blanco) */
+    color: rgb(0, 0, 0);   /* Color del ícono (blanco) */
     background-color: transparent; /* Sin fondo visible */
     border: none;                /* Sin borde visible */
     font-size: xxx-large;        /* Tamaño de fuente muy grande para íconos */

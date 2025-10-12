@@ -24,9 +24,9 @@
 }
 
 .card {
-    background: rgba(0, 0, 0, 0.2);
+    background: #eca06c;
     /* Color semitransparente */
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(9px);
     border-radius: 15px;
     padding: 20px;
     min-height: 260px;

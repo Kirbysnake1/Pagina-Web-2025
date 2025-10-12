@@ -1,0 +1,105 @@
+/* ==========================================================================
+   IMPORTACIÓN DE FUENTES
+   ========================================================================== */
+
+/* Importa la fuente 'Baloo 2' desde Google Fonts con distintos grosores */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+
+
+/* ==========================================================================
+   ESTILOS DE TITULOS Y TEXTOS PERSONALIZADOS
+   ========================================================================== */
+
+/* Clase para títulos principales (centrados) */
+.h1_exp {
+    text-align: center;          /* Centra el texto horizontalmente */
+    font-family: 'Baloo 2';      /* Aplica la fuente importada */
+}
+
+/* Título secundario dentro de cajas o secciones */
+.h1_exp_box {
+    font-family: 'Baloo 2';      /* Mantiene coherencia visual */
+    font-size: 22px;             /* Define tamaño de texto medio-grande */
+}
+
+/* Subtítulo o texto complementario en las cajas */
+.h4_exp_box {
+    font-family: 'Baloo 2';      /* Usa la misma fuente para consistencia */
+    font-size: 16px;             /* Tamaño mediano para subtítulos */
+}
+
+/* Párrafos o descripciones dentro de las cajas */
+.p_exp_box {
+    font-family: 'Baloo 2';      /* Fuente coherente con el diseño */
+    font-size: 12px;             /* Texto más pequeño para lectura */
+}
+
+
+/* ==========================================================================
+   ESTILOS GENERALES DEL BODY
+   ========================================================================== */
+
+body {
+    min-height: 100vh;           /* Asegura que el body cubra toda la altura visible */
+    margin: 0;                   /* Elimina márgenes por defecto */
+    display: flex;               /* Activa el modelo Flexbox */
+    justify-content: center;     /* Centra el contenido horizontalmente */
+    align-items: center;         /* Centra el contenido verticalmente */
+    font-family: monospace;      /* Fuente por defecto para elementos sin clase */
+}
+
+
+/* ==========================================================================
+   SLIDER (CONTENEDOR PRINCIPAL DEL CARRUSEL)
+   ========================================================================== */
+
+.slider {
+    position: relative;          /* Permite posicionar los elementos hijos de forma absoluta */
+    width: 100%;                 /* Ocupa todo el ancho disponible */
+    height: 500px;               /* Define la altura del carrusel */
+    overflow: hidden;            /* Oculta elementos que se salgan del contenedor */
+    font-family: 'Baloo 2';      /* Usa la fuente personalizada en su contenido */
+}
+
+
+/* ==========================================================================
+   ITEMS (CADA TARJETA O ELEMENTO DEL SLIDER)
+   ========================================================================== */
+
+.item {
+    position: absolute;              /* Posicionamiento libre dentro del slider */
+    width: 270px;                    /* Ancho de cada tarjeta */
+    height: 460px;                   /* Alto de cada tarjeta */
+    text-align: justify;             /* Justifica el texto dentro del item */
+    background: rgba(255, 255, 255, 0.2); /* Fondo blanco semitransparente */
+    backdrop-filter: blur(10px);     /* Aplica un efecto de desenfoque al fondo */
+    border-radius: 10px;             /* Bordes redondeados suaves */
+    padding: 20px;                   /* Espacio interno alrededor del contenido */
+    transition: 0.5s;                /* Transición suave para animaciones */
+    left: calc(45% - 110px);         /* Centra el item horizontalmente con ajuste */
+    top: 0;                          /* Posición superior inicial */
+    font-family: 'Baloo 2';          /* Fuente coherente */
+}
+
+
+/* ==========================================================================
+   BOTONES DE NAVEGACIÓN (ANTERIOR Y SIGUIENTE)
+   ========================================================================== */
+
+#next,
+#prev {
+    position: absolute;          /* Permite posicionarlos dentro del slider */
+    top: 40%;                    /* Los coloca aproximadamente en el centro vertical */
+    color: rgb(255, 255, 255);   /* Color del ícono (blanco) */
+    background-color: transparent; /* Sin fondo visible */
+    border: none;                /* Sin borde visible */
+    font-size: xxx-large;        /* Tamaño de fuente muy grande para íconos */
+    font-weight: bold;           /* Negrita para resaltar */
+    left: 50px;                  /* Margen izquierdo inicial (solo para prev) */
+}
+
+/* Botón "Siguiente": se coloca al lado derecho */
+#next {
+    left: unset;                 /* Anula la posición izquierda */
+    right: 50px;                 /* Lo mueve al borde derecho */
+}

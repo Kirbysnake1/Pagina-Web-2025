@@ -1,30 +1,43 @@
-# Ref_PW_AR
+# 🌐 Ref_PW_AR
 
-This template should help get you started developing with Vue 3 in Vite.
+Proyecto frontend desarrollado con **Vue 3**, **HTML**, **CSS**, **JavaScript** y **HTML-Pug**, orientado a la presentación visual de proyectos personales conectados directamente con repositorios de **GitHub**.
 
-## Recommended IDE Setup
+---
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 🧩 Descripción General
 
-## Customize configuration
+Este proyecto tiene como propósito mostrar un portafolio dinámico donde se listan proyectos obtenidos desde GitHub mediante conexión directa con la API.  
+Incluye una estructura modular, estilos documentados bajo estándares profesionales y componentes reutilizables en **Vue.js**.
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+---
 
-## Project Setup
+## 🚀 Tecnologías Utilizadas
 
-```sh
-npm install
-```
+| Tecnología  | Descripción |
+|--------------|-------------|
+| **Vue 3** | Framework progresivo de JavaScript utilizado para la construcción de interfaces de usuario reactivas. |
+| **Vite** | Herramienta de desarrollo rápida y moderna utilizada para compilar y servir el proyecto. |
+| **HTML5 / Pug** | Estructura semántica del contenido. Pug se usa para plantillas HTML más limpias y legibles. |
+| **CSS3** | Estilos organizados con convenciones estandarizadas y comentarios jerárquicos. |
+| **JavaScript (ES6)** | Lógica funcional e interacción con la API de GitHub. |
+| **Git** | Control de versiones y conexión con repositorios para mostrar proyectos dinámicamente. |
 
-### Compile and Hot-Reload for Development
+---
 
-```sh
-npm run dev
-```
+## 📂 Estructura del Proyecto
 
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-# Ref_PW_AR
+Ref_PW_AR/
+│
+├── public/ # Archivos estáticos
+├── src/
+│ ├── assets/ # Imágenes, íconos, fuentes
+│ ├── components/ # Componentes Vue reutilizables
+│ ├── views/ # Vistas principales (Home, Portafolio, etc.)
+│ ├── styles/ # Archivos CSS documentados
+│ ├── App.vue # Componente raíz
+│ ├── main.js # Punto de entrada del proyecto
+│ └── router.js # Enrutador (si aplica)
+│
+├── index.html # Archivo base HTML/Pug
+├── package.json # Dependencias y scripts
+└── vite.config.js # Configuración de Vite

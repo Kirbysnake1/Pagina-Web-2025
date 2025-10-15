@@ -25,7 +25,7 @@
 
             <div class="item">
                 <h1 class="h1_exp_box">Analista QA Automatizador</h1>
-                <h4 class="h4_exp_box">Virtualsoft (Ene/2024 - actualidad) <br> 1 año 4 meses</h4>
+                <h4 class="h4_exp_box">Virtualsoft (Jun/2024 - actualidad) <br> 1 año 4 meses</h4>
                 <p class="p_exp_box">
                     <strong>Tareas realizadas durante mi etapa laboral:</strong><br>
                     - Exp en Sector apuestas deportivas y casinos virtuales <br>
